@@ -63,7 +63,8 @@ def get_rag_chain():
     For all factual questions, use ONLY the provided context to answer.
     Be concise and precise. If the answer spans multiple documents, synthesize them.
     If you cannot find the answer in the context, say so explicitly.
-    Always cite the Source Document in your answer.
+    
+    IMPORTANT: Write naturally and fluently. Do NOT include ugly file paths or inline citations (like "Source Document: C:\...") inside your sentences.
 
     Context:
     {context}"""
