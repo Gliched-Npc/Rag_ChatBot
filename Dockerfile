@@ -11,6 +11,6 @@ COPY core/ ./core/
 COPY memory/ ./memory/
 COPY embeddings/ ./embeddings/
 
-ENV PORT=8080
+ENV PORT=7860
 
 CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port $PORT"]
