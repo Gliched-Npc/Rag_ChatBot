@@ -1,6 +1,6 @@
 ---
 title: Rag Chat Bot
-emoji: T_T
+emoji: 🚀
 colorFrom: indigo
 colorTo: pink
 sdk: docker
