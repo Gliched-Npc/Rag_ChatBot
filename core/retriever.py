@@ -1,8 +1,6 @@
 from pathlib import Path
 from langchain_community.vectorstores import FAISS
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
-
-# ✅ All chains safely imported from the classic library
 from langchain_classic.chains import create_retrieval_chain, create_history_aware_retriever
 from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 
