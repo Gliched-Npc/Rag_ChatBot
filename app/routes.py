@@ -1,4 +1,5 @@
 import uuid
+from pathlib import Path
 from fastapi import APIRouter
 from pydantic import BaseModel
 from core.retriever import get_rag_chain
@@ -33,7 +34,7 @@ async def chat(request: ChatRequest):
     answer = response["answer"]
 
     sources = list(set(
-        doc.metadata.get("source", "Unknown")
+        Path(doc.metadata.get("source", "Unknown")).name
         for doc in response.get("context", [])
     ))
 
@@ -41,6 +42,14 @@ async def chat(request: ChatRequest):
     chat_memory.add_ai_message(answer)
 
     return ChatResponse(answer=answer, sources=sources,session_id=session_id)
+
+@router.get("/documents")
+async def get_documents():
+    data_dir = Path(__file__).resolve().parent.parent / "data"
+    if not data_dir.exists():
+        return {"documents": []}
+    docs = [f.name for f in data_dir.glob("*.pdf")]
+    return {"documents": docs}
 
 @router.get("/health")
 async def health():
