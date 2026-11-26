@@ -62,7 +62,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </div>
             <div>
               <h1 className="font-semibold text-sm text-slate-100 tracking-wide">RAG Chatbot</h1>
-              <p className="text-xs text-slate-400">Gemini 3.8 Flash + FAISS</p>
+              <p className="text-xs text-slate-400">Gemini 2.5 Flash + FAISS</p>
             </div>
           </div>
         </div>
