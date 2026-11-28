@@ -38,7 +38,7 @@ FastAPI Backend [Port 8000]
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/Rag_Chatbot.git
+git clone https://github.com/Gliched-Npc/Rag_ChatBot
 cd Rag_Chatbot
 ```
 
